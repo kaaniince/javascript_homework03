@@ -28,7 +28,7 @@ const menu = [
     title: "Dan Dan Mian",
     category: "China",
     price: 5.99,
-    img: "https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg",
+    img: "https://takestwoeggs.com/wp-content/uploads/2022/02/Dan-Dan-Noodles-Dan-Dan-Mian-5overhead-sq.jpg",
     desc: `Dan dan noodle, serving with green onion `,
   },
   {
@@ -113,7 +113,8 @@ const renderMenuItems = (items) => {
     .map(
       (item) => `
         <div class="menu-items col-lg-6 col-sm-12">
-          <img src=${item.img} alt="${item.title}" class="photo" />
+         <img src="${item.img}" alt="${item.title}" class="photo" onerror="this.onerror=null; this.src='default-image.jpg';" />
+
           <div class="menu-info">
             <div class="menu-title">
               <h4>${item.title}</h4>
